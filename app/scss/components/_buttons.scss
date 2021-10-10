@@ -1,0 +1,25 @@
+.button {
+    cursor: pointer;
+    font-size: $button_font_size;
+    line-height: $button_font_size;
+    color: #FFFFFF;
+    background-color: $button_color;
+    border-radius: 3px;
+    padding: 20px 65px;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: rgba($button_color, 0.8);
+    }
+
+    &:active {
+        background-color: rgba($button_color, 0.9);
+    }
+
+    @include max-width($tablet) {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 14px 100px;
+    }
+}

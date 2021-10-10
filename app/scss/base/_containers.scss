@@ -1,0 +1,16 @@
+.flex_container {
+    display: flex;
+    
+    &--aligned {
+        align-items: center;
+    }
+
+    @include max-width($tablet_wide) {
+        flex-direction: column-reverse;
+        
+        &--aligned {
+            align-items: flex-start;
+        }
+    }
+}
+

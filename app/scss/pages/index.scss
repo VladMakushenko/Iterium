@@ -1,0 +1,408 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.intro {
+    width: 100vw;
+    min-height: 100vh;
+    max-width: 100%;
+    background: url('../../img/main_page/intro.jpg') no-repeat 0 0 / cover;
+    
+    @include set-2x-image {
+        background-image: url('../../img/main_page/intro@2x.jpg');
+    }
+
+    &_content {
+        max-width: 400px;
+        margin-top: 265px;
+        margin-left: 265px;
+    }
+
+    @include max-width($desktop) {
+        min-height: 1080px;
+    }
+
+    @include max-width($tablet_wide) {
+        background-image: url('../../img/main_page/intro_tablet_wide.jpg');
+        min-height: 1368px;
+
+        @include set-2x-image {
+            background-image: url('../../img/main_page/intro_tablet_wide@2x.jpg');
+        }
+        
+        &_content {
+            max-width: 300px;
+            margin-top: 120px;
+            margin-left: 180px;
+        }
+    }
+
+    @include max-width($tablet) {
+        background-image: url('../../img/main_page/intro_tablet.jpg');
+        min-height: 1024px;
+        
+        &_content {
+            max-width: 250px;
+            margin-top: 160px;
+            margin-left: 105px;
+        }
+    }
+
+    @include max-width($phone) {
+        background-image: url('../../img/main_page/intro_mobile.jpg');
+        background-position: center;
+        min-height: 812px;
+        
+        &_content {
+            margin-left: 45px;
+        }
+    }
+}
+
+.new_gen_buildings {
+    padding: 120px 0 120px 175px;
+
+    .h2 {
+        max-width: 400px;
+        margin-bottom: 40px;
+    }
+
+    .flex_container__text {
+        margin-left: 85px;
+    }
+
+    @include max-width($tablet_wide) {
+
+        .h2 {
+            margin-bottom: 70px;
+        }
+
+        .flex_container__text {
+            margin-left: 0;
+            margin-bottom: 100px;
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 80px 0 0;
+
+        .flex_container__text {
+            margin: 0 50px 60px;
+        }
+    }
+
+    @include max-width($phone) {
+
+        .h2 {
+            max-width: 250px;
+            margin-bottom: 50px;
+        }
+
+        .flex_container__text {
+            margin: 0 25px 50px;
+        }
+    }
+}
+
+.lineup {
+    padding: 120px 0 175px 240px;
+
+    .h2 {
+        margin-bottom: 70px;
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 60px 70px 0 175px;
+
+        .h2 {
+            margin-bottom: 60px;
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 60px 0 0;
+
+        .h2 {
+            margin-left: 55px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @include max-width(700px) {
+        background-color: #F5F5F5;
+
+        .h2 {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.new_options {
+    padding: 170px 0 0 175px;
+
+    .options {
+        padding: 0 200px 220px 65px;
+    }
+
+    .h2 {
+        margin-bottom: 110px;
+    }
+
+    &_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 100px;
+    }
+
+    &_list__item p {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+    }
+
+    .subheading {
+        margin-bottom: 15px;
+    }
+
+    .elegance {
+        min-height: 1080px;
+        background: url('../../img/main_page/new_options.jpg') no-repeat 0 50% / cover;
+
+        @include set-2x-image {
+            background-image: url('../../img/main_page/new_options@2x.jpg');
+        }
+
+        .h2 {
+            font-size: 35px;
+            line-height: 50px;
+            color: rgba($main_color, 0.8);
+            max-width: 520px;
+            padding-top: 285px;
+            padding-left: 135px;
+        }
+
+        @include max-width($desktop_medium) {
+
+            .h2 {
+                font-size: 30px;
+                line-height: 45px;
+                font-weight: 100;
+            }
+        }
+
+        @include max-width($tablet_wide) {
+            min-height: 1368px;
+            margin-left: 0;
+            background-position: 20% 50%;
+            
+            .h2 {
+                padding-top: 430px;
+                padding-left: 165px;
+            }
+        }
+
+                
+        @include max-width($tablet) {
+            min-height: 1024px;
+
+            .h2 {
+                font-size: 25px;
+                line-height: 40px;
+                max-width: 400px;
+                padding-top: 285px;
+                padding-left: 100px;
+            }
+        }
+
+        @include max-width($phone) {
+            min-height: 812px;
+            background: url('../../img/main_page/new_options_mobile.jpg') no-repeat 0 50% / cover;
+
+            .h2 {
+                font-size: 23px;
+                line-height: 36px;
+                font-weight: 300;
+                color: #FFFFFF;
+                max-width: 220px;
+                padding-top: 230px;
+                padding-left: 25px;
+            }
+        }
+    }
+
+    @include max-width($desktop_medium) {
+        
+        &_list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 140px 0 0;
+
+        .options {
+            padding: 0 85px 325px 170px;
+        }
+
+        .h2 {
+            margin-bottom: 70px;
+        }
+
+        &_list {
+            grid-gap: 45px 80px;
+        }
+
+        .subheading {
+            margin-bottom: 10px;
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 100px 0 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 720px;
+            left: 0;
+            width: 100%;
+            height: 995px;
+            background: url('../../img/main_page/lines_bg.svg') no-repeat 100% 50% / contain;
+        }
+
+        .options {
+            padding: 0 85px 70px 135px;
+        }
+
+        &_list {
+            grid-template-columns: 1fr;
+            max-width: 410px;
+        }
+    }
+
+    @include max-width($phone) {
+        padding: 60px 0 0;
+
+        &:before {
+            display: none;
+        }
+
+        .options {
+            padding: 0 25px 90px;
+        }
+
+        .h2 {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.opportunities {
+    padding: 170px 0 300px 240px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../img/main_page/lines_bg.svg') no-repeat 100% 30% / auto;
+    }
+
+    .h2 {
+        max-width: 830px;
+        margin-bottom: 135px;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 130px 145px;
+        max-width: 1330px;
+    }
+
+    @include max-width($desktop_medium) {
+        padding: 110px 0 180px 200px;
+
+        .h2 {
+            margin-bottom: 85px;
+        }
+
+        .list {
+            grid-template-columns: 1fr;
+            grid-gap: 100px;
+            max-width: 600px;
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 100px 0 125px 50px;
+
+        &:before {
+            display: none;
+        }
+
+        .h2 {
+            display: none;
+        }
+
+        .list {
+            grid-gap: 60px;
+        }
+    }
+    
+    @include max-width($phone) {
+        padding: 60px 25px 90px;
+
+        .list {
+            grid-gap: 50px;
+        }
+    }
+}
+
+.news {
+    padding: 0 0 150px 240px;
+
+    .wrapper > .h2 {
+        margin-bottom: 60px;
+        display: none;
+    }
+    
+    .wrapper > .button {
+        margin: 50px auto 0;
+        display: none;
+    }
+
+    @include max-width($desktop_medium) {
+        padding: 0 0 100px 180px;
+
+        .wrapper {
+            max-width: 842px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .wrapper > .h2 {
+            display: block;
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 0 0 125px;
+
+        .wrapper > .h2 {
+            margin-left: 25px;
+            margin-bottom: 35px;
+        }
+    }
+
+    @include max-width($phone) {
+        padding: 0 0 60px;
+
+        .wrapper > .button {
+            display: block;
+        }
+    }
+}
+

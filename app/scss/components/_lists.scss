@@ -1,0 +1,82 @@
+.list {
+
+    &__item {
+        position: relative;
+    }
+
+    &--type_arrows {
+
+        .list__item {
+            padding-left: 30px;
+        }
+
+        .list__item:before {
+            content: '';
+            position: absolute;
+            top: calc(50% - 11px);
+            transform: translateY(50%);
+            left: 0;
+            width: 10px;
+            height: 11px;
+            background: url('../img/icons/list_arrow.svg') no-repeat center / contain;
+        }
+    }
+
+    &--type_numbers {
+        counter-reset: li;
+
+        .list__item {
+            counter-increment: li;
+            position: relative;
+            padding-left: 200px;
+
+            &:before {
+                content: '0' counter(li);
+                font-weight: 700;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 110px;
+                line-height: 110px;
+                font-weight: 100;
+                color: rgba($main_color, 0.7);
+            }
+        }
+
+        @include max-width($tablet_wide) {
+
+            .list__item {
+                padding-left: 180px;
+            }
+
+            .list__item:before {
+                font-size: 90px;
+                line-height: 90px;
+            }
+        }
+
+        @include max-width($tablet) {
+
+            .list__item {
+                padding-left: 140px;
+            }
+
+            .list__item:before {
+                font-size: 70px;
+                line-height: 70px;
+            }
+        }
+
+        @include max-width($phone) {
+
+            .list__item {
+                padding-left: 100px;
+            }
+
+            .list__item:before {
+                font-size: 55px;
+                line-height: 55px;
+            }
+        }
+    }
+}

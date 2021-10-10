@@ -1,0 +1,24 @@
+// ==> Media queries
+@mixin max-width($width) {
+    @media screen and (max-width: #{$width}) {
+        @content
+    }
+};
+
+@mixin min-width($width) {
+    @media screen and (min-width: #{$width}) {
+        @content
+    }
+};
+
+// @2x images (when DPR is 1.25+) 
+@mixin set-2x-image {
+    @media
+    only screen and (-o-min-device-pixel-ratio: 5/4),
+    only screen and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min--moz-device-pixel-ratio: 1.25),
+    only screen and (min-device-pixel-ratio: 1.25),
+    only screen and (min-resolution: 1.25dppx) {
+        @content
+    }
+};
