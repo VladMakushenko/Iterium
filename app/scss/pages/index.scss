@@ -384,12 +384,9 @@
 
     @include max-width($desktop_medium) {
         padding: 0 0 100px 180px;
+    }
 
-        .wrapper {
-            max-width: 842px;
-            // margin-left: auto;
-            // margin-right: 0;
-        }
+    @include max-width($tablet_wide) {
 
         .wrapper > .h2 {
             display: block;
