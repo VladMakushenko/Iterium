@@ -43,27 +43,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < lineupSwiperSlides.length; i++) {
             const item = lineupSwiperSlides[i];
+            const itemImage = item.querySelector('.slide_image');
 
-            item.addEventListener('click', () => {
-                lineupSwiper.update();
-
-                const itemIndex = item.dataset.slideIndex;
-                lineupSwiper.slideTo(itemIndex - 1);
-
-                setTimeout(() => {
-                    for (let i = 0; i < lineupSwiperSlides.length; i++) {
-                        const item = lineupSwiperSlides[i];
-                        item.classList.remove('wide-slide');
-                        item.classList.remove('show_content');
-                    }
-        
-                    item.classList.add('wide-slide');
-        
+            if (itemImage) {
+                itemImage.addEventListener('click', function() {
+                    lineupSwiper.update();
+    
+                    const itemIndex = item.dataset.slideIndex;
+                    lineupSwiper.slideTo(itemIndex - 1);
+    
                     setTimeout(() => {
-                        item.classList.add('show_content');
-                    }, 400);
-                }, 300);
-            });
+                        for (let i = 0; i < lineupSwiperSlides.length; i++) {
+                            const item = lineupSwiperSlides[i];
+                            item.classList.remove('wide-slide');
+                            item.classList.remove('show_content');
+                        }
+            
+                        item.classList.add('wide-slide');
+            
+                        setTimeout(() => {
+                            item.classList.add('show_content');
+                        }, 400);
+                    }, 300);
+                });
+            }
         }
 
         return;
