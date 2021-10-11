@@ -88,11 +88,33 @@
 
     .slide_image {
         height: 597px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
-        @for $i from 1 through 8 {
-            &[data-slider-image-#{$i}] {
-                background: url('../img/main_page/lineup_slider/0'+#{$i}+'.jpg') no-repeat center / cover;
-            }
+        &.cubiq_camp {
+            background-image: url("../img/main_page/lineup_slider/cubiq_camp.jpg");
+        }
+        &.cubiq_house {
+            background-image: url("../img/main_page/lineup_slider/cubiq_house.jpg");
+        }
+        &.chalet {
+            background-image: url("../img/main_page/lineup_slider/chalet.jpg");
+        }
+        &.skyline_luxury {
+            background-image: url("../img/main_page/lineup_slider/skyline_luxury.jpg");
+        }
+        &.norca {
+            background-image: url("../img/main_page/lineup_slider/norca.jpg");
+        }
+        &.business {
+            background-image: url("../img/main_page/lineup_slider/business.jpg");
+        }
+        &.sport {
+            background-image: url("../img/main_page/lineup_slider/sport.jpg");
+        }
+        &.cubiq_land {
+            background-image: url("../img/main_page/lineup_slider/cubiq_land.jpg");
         }
     }
 

@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 60px;
-    padding-right: 120px;
+    padding-top: 3.6vw;
+    padding-right: 6.3vw;
 
     &__item:not(:last-of-type) {
         margin-right: 15px;
@@ -51,7 +51,7 @@
         margin-right: 60px;
     }
 
-    @include max-width($tablet_wide) {
+    @include max-width($desktop_medium) {
         padding-right: 70px;
 
         &__item:not(:last-of-type) {

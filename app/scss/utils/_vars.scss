@@ -17,3 +17,24 @@ $tablet: 768px;
 $phone: 500px;
 $phone_small: 375px;
 $phone_tiny: 320px;
+
+// min values for mixin
+$min_device_width: $phone_tiny;
+$max_device_width: $desktop;
+
+// headings
+$h1_font_size_min: 25px;
+$h1_font_size_max: 55px;
+$h1_line_height_min: 40px;
+$h1_line_height_max: 80px;
+
+$h2_font_size_min: 28px;
+$h2_font_size_max: 45px;
+$h2_line_height_min: 42px;
+$h2_line_height_max: 60px;
+
+// text
+$text_font_size_min: 16px;
+$text_font_size_max: 20px;
+$text_line_height_min: 30px;
+$text_line_height_max: 37px;

@@ -13,12 +13,42 @@
 
 // @2x images (when DPR is 1.25+) 
 @mixin set-2x-image {
-    @media
-    only screen and (-o-min-device-pixel-ratio: 5/4),
+    @media only screen and (-o-min-device-pixel-ratio: 5/4),
     only screen and (-webkit-min-device-pixel-ratio: 1.25),
     only screen and (min--moz-device-pixel-ratio: 1.25),
     only screen and (min-device-pixel-ratio: 1.25),
     only screen and (min-resolution: 1.25dppx) {
         @content
     }
+};
+
+// ==> Responsive text
+@mixin fluid-text($min_vw, $max_vw, $min_font_size, $max_font_size, $min_line_height, $max_line_height) {
+    $u1: unit($min_vw);
+    $u2: unit($max_vw);
+    $u3: unit($min_font_size);
+    $u4: unit($max_font_size);
+    $u5: unit($min_line_height);
+    $u6: unit($max_line_height);
+
+    @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+        & {
+            font-size: $min_font_size;
+            line-height: $min_line_height;
+
+            @media screen and (min-width: $min_vw) {
+                font-size: calc(#{$min_font_size} + #{strip-unit($max_font_size - $min_font_size)} * ((100vw - #{$min_vw}) / #{strip-unit($max_vw - $min_vw)}));
+                line-height: calc(#{$min_line_height} + #{strip-unit($max_line_height - $min_line_height)} * ((100vw - #{$min_vw}) / #{strip-unit($max_vw - $min_vw)}));
+            }
+
+            @media screen and (min-width: $max_vw) {
+                font-size: $max_font_size;
+                line-height: $max_line_height;
+            }
+        }
+    }
+};
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
 };

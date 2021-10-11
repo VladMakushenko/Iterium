@@ -5,9 +5,9 @@
     align-items: flex-start;
     width: 100vh;
     height: 60px;
-    max-width: calc(100vh - 70px - 150px);
+    max-width: calc(100vh - 70px - 14vh);
     position: fixed;
-    top: 70px;
+    top: 6.5vh;
     left: 60px;
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: top left;
@@ -31,27 +31,23 @@
     }
 
     .long_line {
-        height: 0.7px;
+        height: 1px;
         width: 100%;
         min-width: 50px;
         background-color: $main_color;
-        margin: 15px 40px 0;
+        margin: 14px 5% 0;
     }
 
     .logo {
         flex-shrink: 0;
-        width: 227px;
-        height: auto;
-        margin-right: 50px;
+        height: 55%;
+        margin-right: 6%;
     }
 
-    @include max-width($tablet_wide) {
+    @include max-width($desktop_medium) {
+        max-width: calc(100vh - 70px - 4vh);
+        height: 52px;
         left: 45px;
-        max-width: calc(100vh - 70px - 100px);
-
-        .logo {
-            width: 196px;
-        }
     }
 
     @include max-width(900px) {

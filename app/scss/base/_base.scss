@@ -4,22 +4,11 @@ body {
     background-color: #FFFFFF;
     color: $main_color;
     font-family: $main_font, $fallback_fonts, sans-serif;
-    font-size: 20px;
-    line-height: 37px;
+    @include fluid-text($min_device_width, $max_device_width, $text_font_size_min, $text_font_size_max, $text_line_height_min, $text_line_height_max);
     letter-spacing: 0.03em;
     font-weight: 300;
     font-style: normal;
     -webkit-text-size-adjust: 100%;
-
-    @include max-width($tablet_wide) {
-        font-size: 18px;
-        line-height: 34px;
-    }
-
-    @include max-width($phone) {
-        font-size: 16px;
-        line-height: 28px;
-    }
 }
 
 *,
@@ -41,46 +30,20 @@ h1, h2, h3 {
 }
 
 .h1 {
-    font-size: 55px;
-    line-height: 80px;
+    @include fluid-text($min_device_width, $max_device_width, $h1_font_size_min, $h1_font_size_max, $h1_line_height_min, $h1_line_height_max);
     font-weight: 300;
 
     @include max-width($desktop_medium) {
-        font-size: 40px;
-        line-height: 55px;
         font-weight: 100;
-    }
-
-    @include max-width($tablet) {
-        font-size: 35px;
-        line-height: 50px;
-    }
-
-    @include max-width($phone) {
-        font-size: 28px;
-        line-height: 42px;
     }
 }
 
 .h2 {
-    font-size: 45px;
-    line-height: 60px;
+    @include fluid-text($min_device_width, $max_device_width, $h2_font_size_min, $h2_font_size_max, $h2_line_height_min, $h2_line_height_max);
     font-weight: 300;
 
     @include max-width($desktop_medium) {
-        font-size: 35px;
-        line-height: 50px;
         font-weight: 100;
-    }
-
-    @include max-width($tablet) {
-        font-size: 30px;
-        line-height: 45px;
-    }
-
-    @include max-width($phone) {
-        font-size: 25px;
-        line-height: 40px;
     }
 }
 

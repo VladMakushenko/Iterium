@@ -43,15 +43,27 @@
             }
         }
 
-        @include max-width($tablet_wide) {
+        @include max-width($desktop_medium) {
 
             .list__item {
-                padding-left: 180px;
+                padding-left: 160px;
             }
 
             .list__item:before {
                 font-size: 90px;
                 line-height: 90px;
+            }
+        }
+
+        @include max-width($tablet_wide) {
+
+            .list__item {
+                padding-left: 140px;
+            }
+
+            .list__item:before {
+                font-size: 80px;
+                line-height: 80px;
             }
         }
 

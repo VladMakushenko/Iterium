@@ -12,13 +12,9 @@
     }
 
     &_content {
-        max-width: 400px;
-        margin-top: 265px;
-        margin-left: 265px;
-    }
-
-    @include max-width($desktop) {
-        min-height: 1080px;
+        max-width: 350px;
+        margin-top: 14vw;
+        margin-left: 15vw;
     }
 
     @include max-width($tablet_wide) {
@@ -28,11 +24,11 @@
         @include set-2x-image {
             background-image: url('../../img/main_page/intro_tablet_wide@2x.jpg');
         }
-        
+
         &_content {
-            max-width: 300px;
-            margin-top: 120px;
-            margin-left: 180px;
+            max-width: 260px;
+            margin-top: 10vw;
+            margin-left: 18vw;
         }
     }
 
@@ -41,9 +37,7 @@
         min-height: 1024px;
         
         &_content {
-            max-width: 250px;
-            margin-top: 160px;
-            margin-left: 105px;
+            margin-top: 22vw;
         }
     }
 
@@ -53,7 +47,8 @@
         min-height: 812px;
         
         &_content {
-            margin-left: 45px;
+            max-width: 200px;
+            margin-left: 12vw;
         }
     }
 }
@@ -231,9 +226,18 @@
     }
 
     @include max-width($desktop_medium) {
+
+        .options {
+            padding: 0 200px 110px 65px;
+        }
+
+        .h2 {
+            margin-bottom: 70px;
+        }
         
         &_list {
             grid-template-columns: 1fr 1fr;
+            grid-gap: 45px 80px;
         }
     }
 
@@ -242,14 +246,6 @@
 
         .options {
             padding: 0 85px 325px 170px;
-        }
-
-        .h2 {
-            margin-bottom: 70px;
-        }
-
-        &_list {
-            grid-gap: 45px 80px;
         }
 
         .subheading {
@@ -298,7 +294,7 @@
 }
 
 .opportunities {
-    padding: 170px 0 300px 240px;
+    padding: 170px 20px 300px 240px;
 
     &:before {
         content: '';
@@ -323,10 +319,21 @@
     }
 
     @include max-width($desktop_medium) {
-        padding: 110px 0 180px 200px;
+        padding: 110px 20px 180px 200px;
 
         .h2 {
             margin-bottom: 85px;
+        }
+
+        .list {
+            grid-gap: 60px;
+        }
+    }
+
+    @include max-width($tablet_wide) {
+
+        .h2 {
+            max-width: 100%;
         }
 
         .list {
@@ -334,7 +341,7 @@
             grid-gap: 100px;
             max-width: 600px;
         }
-    }
+    } 
 
     @include max-width($tablet) {
         padding: 100px 0 125px 50px;
@@ -343,17 +350,18 @@
             display: none;
         }
 
-        .h2 {
-            display: none;
-        }
-
         .list {
+            grid-template-columns: 1fr;
             grid-gap: 60px;
         }
     }
     
     @include max-width($phone) {
         padding: 60px 25px 90px;
+
+        .h2 {
+            display: none;
+        }
 
         .list {
             grid-gap: 50px;
@@ -379,8 +387,8 @@
 
         .wrapper {
             max-width: 842px;
-            margin-left: auto;
-            margin-right: 0;
+            // margin-left: auto;
+            // margin-right: 0;
         }
 
         .wrapper > .h2 {
